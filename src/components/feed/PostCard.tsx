@@ -41,7 +41,7 @@ const MoreMenu = ({ post, onClose }: { post: Post; onClose: () => void }) => {
 
 export const PostCard = ({ post: p, delay = 0 }: { post: Post; delay?: number }) => {
   const nav = useNavigate()
-  const { toggleLike, toggleRepost, toggleBookmark, voteOnPoll, mutedUsers, blockedUsers } = useApp()
+  const { toggleLike, toggleRepost, toggleBookmark, voteOnPoll, mutedUsers, blockedUsers, addToast } = useApp()
   const [menuOpen, setMenuOpen] = useState(false)
 
   if (blockedUsers.includes(p.author.handle)) return null

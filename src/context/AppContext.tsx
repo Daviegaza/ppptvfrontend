@@ -141,7 +141,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   const markRead = useCallback((id: string) => setNotifications(p => p.map(n => n.id !== id ? n : { ...n, read: true })), [])
 
   const sendMessage = useCallback((threadId: string, text: string) => {
-    const { YOU } = require('../data/mockData')
+    const YOU = { id:'me', name:'You', handle:'youhandle', avatarColor:'linear-gradient(135deg,#7c3aed,#a855f7)', verified:false, isPro:false, followers:142, following:89 }
     setConversations(p => p.map(c => c.id !== threadId ? c : {
       ...c, lastMessage: text, lastTimestamp: 'just now',
       messages: [...c.messages, { id: `m${Date.now()}`, from: YOU, to: c.participant, content: text, timestamp: 'just now', read: true, thread: threadId }]

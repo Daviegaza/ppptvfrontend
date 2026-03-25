@@ -66,7 +66,7 @@ export const ExplorePage = () => {
           <div className="explore-grid">
             {featFiltered.map(f => (
               <div key={f.id} className="explore-card">
-                <img src={f.img} alt="" className="explore-card-img" />
+                <div className="explore-card-img-wrap"><img src={f.img} alt="" className="explore-card-img" /></div>
                 <div className="explore-cat" style={{ color: CAT_COLORS[f.category]??'var(--accent)' }}>{f.category}</div>
                 <div className="explore-headline">{f.headline}</div>
                 <div className="explore-meta">{f.source} · {f.time} · {f.reads} reads</div>

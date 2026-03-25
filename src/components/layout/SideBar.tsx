@@ -45,7 +45,7 @@ export const SideBar = () => {
             <span className="ni"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">{n.icon}</svg></span>
             <span className="nav-txt">{n.label}</span>
             {n.label==='Notifications' && unreadCount > 0 && <span className="nav-badge">{unreadCount}</span>}
-            {n.label==='Messages' && unreadMessages > 0 && <span className="nav-badge" style={{background:'var(--blue)'}}>{unreadMessages}</span>}
+            {n.label==='Messages' && unreadMessages > 0 && <span className="nav-badge blue-badge">{unreadMessages}</span>}
           </NavLink>
         ))}
 
